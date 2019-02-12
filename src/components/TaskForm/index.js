@@ -1,16 +1,35 @@
 import React, { Component } from 'react'
 
 class TaskForm extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      inputText: ''
+    }
+  }
+
+  handleChange = event => {
+    this.setState({
+      inputText: event.target.value
+    })
+  }
+
   render() {
     return (
-      <form>
+      <form
+        onSubmit={event => {
+          this.props.addTask(event, this.state.inputText)
+        }}
+      >
         <input
           type="text"
-          name="task-input"
           placeholder="What to do?"
+          value={this.state.inputText}
+          onChange={this.handleChange}
           required
         />
-        <input type="button" value="Add" />
+        <input type="submit" value="Add" />
       </form>
     )
   }
