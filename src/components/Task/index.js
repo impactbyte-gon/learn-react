@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
 
+import './index.css'
+
 class Task extends Component {
   render() {
-    return <li>{this.props.children}</li>
+    return <li className="task">{this.props.children}</li>
   }
 }
 

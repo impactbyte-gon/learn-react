@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import Task from './Task'
+import Task from '../Task'
 
 class App extends Component {
   constructor() {
@@ -28,6 +28,9 @@ class App extends Component {
           {this.state.data.map((item, index) => {
             return <Task key={index}>{item.text}</Task>
           })}
+        </ul>
+        <ul>
+          <li>Normal List</li>
         </ul>
       </div>
     )
