@@ -15,11 +15,18 @@ class TaskForm extends Component {
     })
   }
 
+  clearInputText = () => {
+    this.setState({
+      inputText: ''
+    })
+  }
+
   render() {
     return (
       <form
         onSubmit={event => {
           this.props.addTask(event, this.state.inputText)
+          this.clearInputText()
         }}
       >
         <input
