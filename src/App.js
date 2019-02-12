@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import Task from './Task'
+
 class App extends Component {
   constructor() {
     super()
@@ -23,8 +25,8 @@ class App extends Component {
       <div>
         <h1>MyTasks</h1>
         <ul>
-          {this.state.data.map(item => {
-            return <li>{item.text}</li>
+          {this.state.data.map((item, index) => {
+            return <Task key={index}>{item.text}</Task>
           })}
         </ul>
       </div>
