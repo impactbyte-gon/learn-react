@@ -7,3 +7,7 @@ npm start
 # or
 yarn start
 ```
+
+## Architecture
+
+![](public/assets/architecture.png)
