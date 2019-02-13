@@ -1,4 +1,28 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
+
+const Form = styled.form`
+  padding: 10px;
+`
+
+const InputText = styled.input`
+  height: 10px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 200px;
+`
+
+const SubmitButton = styled.input`
+  color: white;
+  background: #72a869;
+  font-size: 16px;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: none;
+  margin-left: 10px;
+`
 
 class TaskForm extends Component {
   constructor() {
@@ -23,22 +47,22 @@ class TaskForm extends Component {
 
   render() {
     return (
-      <form
+      <Form
         onSubmit={event => {
           event.preventDefault()
           this.props.addTask(event, this.state.inputText)
           this.clearInputText()
         }}
       >
-        <input
+        <InputText
           type="text"
           placeholder="What to do?"
           value={this.state.inputText}
           onChange={this.handleChange}
           required
         />
-        <input type="submit" value="Add" />
-      </form>
+        <SubmitButton type="submit" value="Add" />
+      </Form>
     )
   }
 }
