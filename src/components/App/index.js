@@ -10,6 +10,7 @@ const Container = styled.div`
   height: 80vh;
   margin: 0 auto;
   border: 2px solid black;
+  font-family: Arial, Helvetica, sans-serif;
 `
 
 class App extends Component {
