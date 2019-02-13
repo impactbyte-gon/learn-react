@@ -21,9 +21,7 @@ class Content extends Component {
     }
   }
 
-  addTask = (event, inputText) => {
-    event.preventDefault()
-
+  addTask = inputText => {
     const newData = this.state.data.concat({
       text: inputText
     })

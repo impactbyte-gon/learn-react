@@ -25,6 +25,7 @@ class TaskForm extends Component {
     return (
       <form
         onSubmit={event => {
+          event.preventDefault()
           this.props.addTask(event, this.state.inputText)
           this.clearInputText()
         }}
