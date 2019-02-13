@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 import Header from '../Header'
 import Content from '../Content'
-import Footer from '../Footer'
 
 const Container = styled.div`
   width: 300px;
@@ -11,6 +10,8 @@ const Container = styled.div`
   margin: 0 auto;
   border: 2px solid black;
   font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
 `
 
 class App extends Component {
@@ -19,7 +20,6 @@ class App extends Component {
       <Container>
         <Header />
         <Content />
-        <Footer />
       </Container>
     )
   }

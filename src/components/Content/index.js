@@ -1,7 +1,14 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
 
 import TaskForm from '../TaskForm'
 import TaskList from '../TaskList'
+
+const StyledContent = styled.div`
+  background: #4a4a4a;
+  color: white;
+  flex: 1;
+`
 
 class Content extends Component {
   constructor() {
@@ -33,10 +40,10 @@ class Content extends Component {
 
   render() {
     return (
-      <React.Fragment>
+      <StyledContent>
         <TaskForm addTask={this.addTask} />
         <TaskList data={this.state.data} />
-      </React.Fragment>
+      </StyledContent>
     )
   }
 }
