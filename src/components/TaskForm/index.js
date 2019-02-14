@@ -50,7 +50,7 @@ class TaskForm extends Component {
       <Form
         onSubmit={event => {
           event.preventDefault()
-          this.props.addTask(event, this.state.inputText)
+          this.props.addTask(this.state.inputText)
           this.clearInputText()
         }}
       >

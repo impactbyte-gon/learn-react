@@ -6,7 +6,7 @@ import Content from '../Content'
 
 const Container = styled.div`
   width: 300px;
-  height: 80vh;
+  height: 500px;
   margin: 0 auto;
   border: 2px solid black;
   font-family: Arial, Helvetica, sans-serif;

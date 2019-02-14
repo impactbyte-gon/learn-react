@@ -11,7 +11,15 @@ class TaskList extends Component {
       <StyledTaskList>
         <ul>
           {this.props.data.map((item, index) => {
-            return <Task key={index}>{item.text}</Task>
+            return (
+              <Task
+                key={index}
+                index={index}
+                removeTask={this.props.removeTask}
+              >
+                {item.text}
+              </Task>
+            )
           })}
         </ul>
       </StyledTaskList>

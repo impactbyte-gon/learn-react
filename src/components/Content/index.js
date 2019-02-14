@@ -38,11 +38,21 @@ class Content extends Component {
     })
   }
 
+  removeTask = index => {
+    const newData = this.state.data.filter((item, itemIndex) => {
+      return itemIndex !== index
+    })
+
+    this.setState({
+      data: newData
+    })
+  }
+
   render() {
     return (
       <StyledContent>
         <TaskForm addTask={this.addTask} />
-        <TaskList data={this.state.data} />
+        <TaskList data={this.state.data} removeTask={this.removeTask} />
       </StyledContent>
     )
   }
